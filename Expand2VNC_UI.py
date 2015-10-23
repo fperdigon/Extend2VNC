@@ -1,0 +1,150 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'Expand2VNC.ui'
+#
+# Created: Thu Oct 22 19:18:10 2015
+#      by: PyQt4 UI code generator 4.10.4
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName(_fromUtf8("MainWindow"))
+        MainWindow.resize(629, 197)
+        self.centralwidget = QtGui.QWidget(MainWindow)
+        self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
+        self.verticalLayout = QtGui.QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        spacerItem = QtGui.QSpacerItem(20, 21, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
+        self.verticalLayout.addItem(spacerItem)
+        self.horizontalLayout = QtGui.QHBoxLayout()
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
+        spacerItem1 = QtGui.QSpacerItem(18, 20, QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem1)
+        self.label = QtGui.QLabel(self.centralwidget)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(1)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy)
+        self.label.setObjectName(_fromUtf8("label"))
+        self.horizontalLayout.addWidget(self.label)
+        self.resolution_comboBox = QtGui.QComboBox(self.centralwidget)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(4)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.resolution_comboBox.sizePolicy().hasHeightForWidth())
+        self.resolution_comboBox.setSizePolicy(sizePolicy)
+        self.resolution_comboBox.setMinimumSize(QtCore.QSize(0, 0))
+        self.resolution_comboBox.setMaximumSize(QtCore.QSize(1600000, 1600000))
+        self.resolution_comboBox.setObjectName(_fromUtf8("resolution_comboBox"))
+        self.resolution_comboBox.addItem(_fromUtf8(""))
+        self.resolution_comboBox.addItem(_fromUtf8(""))
+        self.resolution_comboBox.addItem(_fromUtf8(""))
+        self.resolution_comboBox.addItem(_fromUtf8(""))
+        self.resolution_comboBox.addItem(_fromUtf8(""))
+        self.horizontalLayout.addWidget(self.resolution_comboBox)
+        spacerItem2 = QtGui.QSpacerItem(108, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem2)
+        self.start_pushButton = QtGui.QPushButton(self.centralwidget)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.start_pushButton.sizePolicy().hasHeightForWidth())
+        self.start_pushButton.setSizePolicy(sizePolicy)
+        self.start_pushButton.setMinimumSize(QtCore.QSize(100, 25))
+        self.start_pushButton.setObjectName(_fromUtf8("start_pushButton"))
+        self.horizontalLayout.addWidget(self.start_pushButton)
+        spacerItem3 = QtGui.QSpacerItem(18, 20, QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem3)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.horizontalLayout_3 = QtGui.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(_fromUtf8("horizontalLayout_3"))
+        spacerItem4 = QtGui.QSpacerItem(85, 20, QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem4)
+        self.customres_lineEdit = QtGui.QLineEdit(self.centralwidget)
+        self.customres_lineEdit.setEnabled(True)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.customres_lineEdit.sizePolicy().hasHeightForWidth())
+        self.customres_lineEdit.setSizePolicy(sizePolicy)
+        self.customres_lineEdit.setText(_fromUtf8(""))
+        self.customres_lineEdit.setObjectName(_fromUtf8("customres_lineEdit"))
+        self.horizontalLayout_3.addWidget(self.customres_lineEdit)
+        spacerItem5 = QtGui.QSpacerItem(278, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem5)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
+        spacerItem6 = QtGui.QSpacerItem(20, 28, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem6)
+        self.horizontalLayout_2 = QtGui.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
+        spacerItem7 = QtGui.QSpacerItem(13, 20, QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem7)
+        self.status_label = QtGui.QLabel(self.centralwidget)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.status_label.sizePolicy().hasHeightForWidth())
+        self.status_label.setSizePolicy(sizePolicy)
+        self.status_label.setObjectName(_fromUtf8("status_label"))
+        self.horizontalLayout_2.addWidget(self.status_label)
+        spacerItem8 = QtGui.QSpacerItem(17, 20, QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem8)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtGui.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 629, 22))
+        self.menubar.setObjectName(_fromUtf8("menubar"))
+        self.menuHelp = QtGui.QMenu(self.menubar)
+        self.menuHelp.setObjectName(_fromUtf8("menuHelp"))
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtGui.QStatusBar(MainWindow)
+        self.statusbar.setObjectName(_fromUtf8("statusbar"))
+        MainWindow.setStatusBar(self.statusbar)
+        self.actionMain_help = QtGui.QAction(MainWindow)
+        self.actionMain_help.setObjectName(_fromUtf8("actionMain_help"))
+        self.actionAbout_Expand2VNC = QtGui.QAction(MainWindow)
+        self.actionAbout_Expand2VNC.setObjectName(_fromUtf8("actionAbout_Expand2VNC"))
+        self.actionAbout_Qt = QtGui.QAction(MainWindow)
+        self.actionAbout_Qt.setObjectName(_fromUtf8("actionAbout_Qt"))
+        self.menuHelp.addAction(self.actionMain_help)
+        self.menuHelp.addAction(self.actionAbout_Expand2VNC)
+        self.menuHelp.addAction(self.actionAbout_Qt)
+        self.menubar.addAction(self.menuHelp.menuAction())
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(_translate("MainWindow", "Expand2VNC", None))
+        self.label.setText(_translate("MainWindow", "Resolution", None))
+        self.resolution_comboBox.setItemText(0, _translate("MainWindow", "640x480 (VGA)", None))
+        self.resolution_comboBox.setItemText(1, _translate("MainWindow", "1024x600 (Tablet 7\")", None))
+        self.resolution_comboBox.setItemText(2, _translate("MainWindow", "1024x768 (Monitor 7:3)", None))
+        self.resolution_comboBox.setItemText(3, _translate("MainWindow", "1366x768 (Monitor 16:9)", None))
+        self.resolution_comboBox.setItemText(4, _translate("MainWindow", "Custom", None))
+        self.start_pushButton.setText(_translate("MainWindow", "Start", None))
+        self.customres_lineEdit.setPlaceholderText(_translate("MainWindow", "1366x768", None))
+        self.status_label.setText(_translate("MainWindow", "Status", None))
+        self.menuHelp.setTitle(_translate("MainWindow", "Help", None))
+        self.actionMain_help.setText(_translate("MainWindow", "Main help", None))
+        self.actionAbout_Expand2VNC.setText(_translate("MainWindow", "About Expand2VNC", None))
+        self.actionAbout_Qt.setText(_translate("MainWindow", "About Qt", None))
+
