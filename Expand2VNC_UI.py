@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'Expand2VNC_UI.ui'
 #
-# Created: Sat Oct 24 19:03:08 2015
+# Created: Sun Oct 25 00:20:32 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -139,7 +139,7 @@ class Ui_MainWindow(object):
         self.resolution_comboBox.setItemText(0, _translate("MainWindow", "640x480 (VGA)", None))
         self.resolution_comboBox.setItemText(1, _translate("MainWindow", "800x480 (Cell)", None))
         self.resolution_comboBox.setItemText(2, _translate("MainWindow", "1024x600 (Tablet 7\")", None))
-        self.resolution_comboBox.setItemText(3, _translate("MainWindow", "1027x768 (Monitor 7:3)", None))
+        self.resolution_comboBox.setItemText(3, _translate("MainWindow", "1024x768 (Monitor 4:3)", None))
         self.resolution_comboBox.setItemText(4, _translate("MainWindow", "1366x768 (Monitor 16:9)", None))
         self.resolution_comboBox.setItemText(5, _translate("MainWindow", "Custom", None))
         self.start_pushButton.setText(_translate("MainWindow", "Start", None))
