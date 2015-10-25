@@ -89,6 +89,11 @@
         </item>
         <item>
          <property name="text">
+          <string>800x480 (Cell)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
           <string>1024x600 (Tablet 7&quot;)</string>
          </property>
         </item>
@@ -281,7 +286,7 @@
      <x>0</x>
      <y>0</y>
      <width>629</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuHelp">

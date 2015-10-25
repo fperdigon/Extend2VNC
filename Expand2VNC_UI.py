@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Expand2VNC.ui'
+# Form implementation generated from reading ui file 'Expand2VNC_UI.ui'
 #
-# Created: Thu Oct 22 19:18:10 2015
+# Created: Sat Oct 24 19:03:08 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -59,6 +59,7 @@ class Ui_MainWindow(object):
         self.resolution_comboBox.addItem(_fromUtf8(""))
         self.resolution_comboBox.addItem(_fromUtf8(""))
         self.resolution_comboBox.addItem(_fromUtf8(""))
+        self.resolution_comboBox.addItem(_fromUtf8(""))
         self.horizontalLayout.addWidget(self.resolution_comboBox)
         spacerItem2 = QtGui.QSpacerItem(108, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem2)
@@ -110,7 +111,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.addLayout(self.horizontalLayout_2)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 629, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 629, 21))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menuHelp = QtGui.QMenu(self.menubar)
         self.menuHelp.setObjectName(_fromUtf8("menuHelp"))
@@ -136,10 +137,11 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "Expand2VNC", None))
         self.label.setText(_translate("MainWindow", "Resolution", None))
         self.resolution_comboBox.setItemText(0, _translate("MainWindow", "640x480 (VGA)", None))
-        self.resolution_comboBox.setItemText(1, _translate("MainWindow", "1024x600 (Tablet 7\")", None))
-        self.resolution_comboBox.setItemText(2, _translate("MainWindow", "1024x768 (Monitor 7:3)", None))
-        self.resolution_comboBox.setItemText(3, _translate("MainWindow", "1366x768 (Monitor 16:9)", None))
-        self.resolution_comboBox.setItemText(4, _translate("MainWindow", "Custom", None))
+        self.resolution_comboBox.setItemText(1, _translate("MainWindow", "800x480 (Cell)", None))
+        self.resolution_comboBox.setItemText(2, _translate("MainWindow", "1024x600 (Tablet 7\")", None))
+        self.resolution_comboBox.setItemText(3, _translate("MainWindow", "1027x768 (Monitor 7:3)", None))
+        self.resolution_comboBox.setItemText(4, _translate("MainWindow", "1366x768 (Monitor 16:9)", None))
+        self.resolution_comboBox.setItemText(5, _translate("MainWindow", "Custom", None))
         self.start_pushButton.setText(_translate("MainWindow", "Start", None))
         self.customres_lineEdit.setPlaceholderText(_translate("MainWindow", "1366x768", None))
         self.status_label.setText(_translate("MainWindow", "Status", None))
