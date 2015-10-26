@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 __author__ = 'fco'
-import Expand2VNC_UI
+import Extend2VNC_UI
 from PyQt4 import QtCore, QtGui
 
-class EVUI(Expand2VNC_UI.Ui_MainWindow):
+class EVUI(Extend2VNC_UI.Ui_MainWindow):
     def __init__(self):
         super(EVUI, self).__init__()
     def setupUi(self, MainWindow):
@@ -18,7 +19,11 @@ class EVUI(Expand2VNC_UI.Ui_MainWindow):
 
         self.actionMain_help.triggered.connect(self.helpfunc)
         self.actionAbout_Qt.triggered.connect(QtGui.qApp.aboutQt)
-        self.actionAbout_Expand2VNC.triggered.connect(self.Aboutfunc)
+        self.actionAbout_Extend2VNC.triggered.connect(self.Aboutfunc)
+
+    def closeEvent(self, event):
+        self.onExit()
+
 
     def startfunc(self):
         if (self.start == False):
@@ -38,14 +43,22 @@ class EVUI(Expand2VNC_UI.Ui_MainWindow):
             utils.generateVirtualScreen(resolution)
             self.popen = utils.vncStart(resolution)
             nIP = utils.obtainIP()
-            self.status_label.setText('status: Virtual screen active in ' + nIP + ':5900 connect using a vnc client')
+            self.status_label.setText('Status: Virtual screen active in ' + nIP + ':5900 connect using a vnc client')
             self.start = True
 
         else:
             self.start_pushButton.setText('Star')
             self.popen.kill()
             utils.closeVirtualScreen()
-            self.status_label.setText('status: Virtual screen stoped')
+            self.status_label.setText('Status: Virtual screen stoped')
+            self.start = False
+
+    def onExit(self):
+        if (self.start == True):
+            self.start_pushButton.setText('Star')
+            self.popen.kill()
+            utils.closeVirtualScreen()
+            self.status_label.setText('Status: Virtual screen stoped')
             self.start = False
 
     def comboboxChangefunc(self):
@@ -56,38 +69,38 @@ class EVUI(Expand2VNC_UI.Ui_MainWindow):
 
     def Aboutfunc(self):
 
-        QtGui.QMessageBox.about(QtGui.QMainWindow(), "About Expand2VNC",
-                "<b>Expand2VNC v0.1</b> is an aplication to expand your screen using a virtual video interface and vncserver in Linux. Licence GPL v2"
-                "<br><br><b>Expand2VNC v0.1</b> es una aplicacion para expandir su pantalla usando una interfaz de video vistual y vncserver en Linux. Licencia GPL v2"
-                "<br><br>Programer: Francisco Perdigon Romero. (<b>bosito7</b>)"
-                "<br>Email: <a href=\"mailto:bosito7gmail.com?subject=About Expand2VNC\">bosito7@gmail.com</a>"
+        QtGui.QMessageBox.about(QtGui.QMainWindow(), "About Extend2VNC",
+                "<b>Extend2VNC v0.1</b> in short, can extend the screen of your monitor wirelessly; in many words, is an application to Extend your screen using a virtual video interface and vncserver in Linux. Licence GPL v2."
+                "<br><br><b>Extend2VNC v0.1</b> en pocas palabras, permite extender la pantalla de su monitor inalámbricamente; en muchas palabras, es una aplicación para extender su pantalla usando una interfaz de video virtual y vncserver en Linux. Licencia GPL v2."
+                "<br><br>Programer: Francisco Perdigón Romero. (<b>bosito7</b>)"
+                "<br>Email: <a href=\"mailto:bosito7gmail.com?subject=About Extend2VNC\">bosito7@gmail.com</a>"
                 "<br><br>GUTL. Grupo de usuarios de tecnologias libres."
-                "<br> <a href=\"http://gutl.jovenclub.cu/\">http://gutl.jovenclub.cu/</a> ")
+                "<br> <a href=\"http://gutl.jovenclub.cu/\">http://gutl.jovenclub.cu/</a> ".decode("utf8"))
 
     def helpfunc(self):
 
-        QtGui.QMessageBox.about(QtGui.QMainWindow(), "About Expand2VNC",
-                "<b>(English) Expand2VNC v0.1</b> is an aplication to expand your screen using a virtual video interface and vncserver in Linux."
+        QtGui.QMessageBox.about(QtGui.QMainWindow(), "About Extend2VNC",
+                "<b>(English) Extend2VNC v0.1</b> in short, can extend the screen of your monitor wirelessly; in many words, is an application to Extend your screen using a virtual video interface and vncserver in Linux."
                 "<br>Dependencies: x11vnc, if your system is based on Debian or Ubuntu put in a terminal <b> sudo apt-get install x11vnc </b>"
                 "<br><br>Select the appropriate resolution for display on your device, there appears, select Custom and then specify it."
                 "<br> After clicking Start, down the status bar will appear that you are ready and will leave the IP number to us that we have"
                 "Connect from VNC client, to stop click on Stop."
                 "<br><br>VNC Clients recommended for use with this tool are (with other mouse pointer does not appear):"
                 "<br>For Linux, use xtightvnc to install if your system is based on Debian or Ubuntu put in a terminal <b>sudo apt-get install xtightvncviewer </b>"
-                "<br>Then in a terminal put <b>vncviewer numero_ip </b>"
-                "<br>For Windows and MacOS tightvnc to install instal official site and download <a href=\"http://www.tightvnc.com/\"> http://www.tightvnc.com/ </a>"
-                "<br>In Android download VNC Client from the Play Store"
+                "<br>Then in a terminal put <b>vncviewer ip_number </b>"
+                "<br>For Windows and MacOS tightvnc download from official site <a href=\"http://www.tightvnc.com/\"> http://www.tightvnc.com/ </a>"
+                "<br>In Android download VNC Client Free from the Play Store <a href=\"https://play.google.com/store/apps/details?id=com.evolve.androidVNC\">https://play.google.com/store/apps/details?id=com.evolve.androidVNC</a>"
 
-                "<br><br><b>(Espanish) Expand2VNC v0.1</b> es una aplicacion para expandir su pantalla usando una interfaz de video vistual y vncserver en Linux."
+                "<br><br><b>(Espanish) Extend2VNC v0.1</b> en pocas palabras, permite extender la pantalla de su monitor inalámbricamente; en muchas palabras, es una aplicación para extender su pantalla usando una interfaz de video virtual y vncserver en Linux."
                 "<br>Dependencias: x11vnc, si su sistema es basado en Debian o Ubuntu poner en un terminal <b>sudo apt-get install x11vnc</b>"
-                "<br><br>Seleccione la resolucion adecuada para mostrar en su dispositivo, si no aparece entonces seleccione Custom y especifiquela."
-                "<br>Despues de hacer clic en Start, abajo en la barra de estado aparecera que ya esta listo y saldra el numero IP al que nos tenemos que"
-                " conectar desde el cliente vnc, para parar dar clic en Stop."
+                "<br><br>Seleccione la resolución adecuada para mostrar en su dispositivo, si no aparece, entonces seleccione Custom y especifíquela."
+                "<br>Despues de hacer clic en Start, abajo en la barra de estado aparecerá que ya esta listo y saldra el número IP al que nos tenemos que"
+                " conectar desde el cliente vnc, para detener dar clic en Stop."
                 "<br><br>Los clientes vnc recomendados para el uso en conjunto con esta herramienta son (con otros el puntero del mouse no aparece):"
-                "<br>Para Linux use tightvnc para instalarlo si su sistema es basado en Debian o Ubuntu poner en un terminal <b>sudo apt-get install xtightvncviewer</b>"
-                "<br>Luego en un terminal poner <b>vncviewer numero_ip</b>"
-                "<br>Para Windows y MacOS use tightvnc para instalarlo descargar del sitio oficial <a href=\"http://www.tightvnc.com/\">http://www.tightvnc.com/</a> "
-                "<br>Para Android descargar VNC Client del Play Store " )
+                "<br>Para Linux use tightvnc para instalarlo, si su sistema es basado en Debian o Ubuntu poner en un terminal <b>sudo apt-get install xtightvncviewer</b>"
+                "<br>Luego en un terminal poner <b>vncviewer número_ip</b>"
+                "<br>Para Windows y MacOS use tightvnc descargelo del sitio oficial <a href=\"http://www.tightvnc.com/\">http://www.tightvnc.com/</a>"
+                "<br>Para Android descargar VNC Client Free del Play Store <a href=\"https://play.google.com/store/apps/details?id=com.evolve.androidVNC\">https://play.google.com/store/apps/details?id=com.evolve.androidVNC</a>".decode("utf8") )
 
 
 
@@ -165,10 +178,17 @@ class utils:
         print(nIP)
         return nIP
 
+class MyMainWindow(QtGui.QMainWindow):
+    def __init__(self):
+        super(MyMainWindow, self).__init__()
+
+    def closeEvent(self, event):
+        ui.onExit()
+
 if __name__ == "__main__":
        import sys
        app = QtGui.QApplication(sys.argv)
-       MainWindow = QtGui.QMainWindow()
+       MainWindow = MyMainWindow()
        ui = EVUI()
        ui.setupUi(MainWindow)
        MainWindow.show()

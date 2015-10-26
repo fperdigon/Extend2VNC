@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Expand2VNC_UI.ui'
+# Form implementation generated from reading ui file 'Extend2VNC_UI.ui'
 #
-# Created: Sun Oct 25 00:20:32 2015
+# Created: Sun Oct 25 01:23:59 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -121,12 +121,12 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.actionMain_help = QtGui.QAction(MainWindow)
         self.actionMain_help.setObjectName(_fromUtf8("actionMain_help"))
-        self.actionAbout_Expand2VNC = QtGui.QAction(MainWindow)
-        self.actionAbout_Expand2VNC.setObjectName(_fromUtf8("actionAbout_Expand2VNC"))
+        self.actionAbout_Extend2VNC = QtGui.QAction(MainWindow)
+        self.actionAbout_Extend2VNC.setObjectName(_fromUtf8("actionAbout_Extend2VNC"))
         self.actionAbout_Qt = QtGui.QAction(MainWindow)
         self.actionAbout_Qt.setObjectName(_fromUtf8("actionAbout_Qt"))
         self.menuHelp.addAction(self.actionMain_help)
-        self.menuHelp.addAction(self.actionAbout_Expand2VNC)
+        self.menuHelp.addAction(self.actionAbout_Extend2VNC)
         self.menuHelp.addAction(self.actionAbout_Qt)
         self.menubar.addAction(self.menuHelp.menuAction())
 
@@ -134,7 +134,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(_translate("MainWindow", "Expand2VNC", None))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Extend2VNC", None))
         self.label.setText(_translate("MainWindow", "Resolution", None))
         self.resolution_comboBox.setItemText(0, _translate("MainWindow", "640x480 (VGA)", None))
         self.resolution_comboBox.setItemText(1, _translate("MainWindow", "800x480 (Cell)", None))
@@ -147,6 +147,6 @@ class Ui_MainWindow(object):
         self.status_label.setText(_translate("MainWindow", "Status", None))
         self.menuHelp.setTitle(_translate("MainWindow", "Help", None))
         self.actionMain_help.setText(_translate("MainWindow", "Main help", None))
-        self.actionAbout_Expand2VNC.setText(_translate("MainWindow", "About Expand2VNC", None))
+        self.actionAbout_Extend2VNC.setText(_translate("MainWindow", "About Extend2VNC", None))
         self.actionAbout_Qt.setText(_translate("MainWindow", "About Qt", None))
 

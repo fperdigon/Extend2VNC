@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Expand2VNC</string>
+   <string>Extend2VNC</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -294,7 +294,7 @@
      <string>Help</string>
     </property>
     <addaction name="actionMain_help"/>
-    <addaction name="actionAbout_Expand2VNC"/>
+    <addaction name="actionAbout_Extend2VNC"/>
     <addaction name="actionAbout_Qt"/>
    </widget>
    <addaction name="menuHelp"/>
@@ -305,9 +305,9 @@
     <string>Main help</string>
    </property>
   </action>
-  <action name="actionAbout_Expand2VNC">
+  <action name="actionAbout_Extend2VNC">
    <property name="text">
-    <string>About Expand2VNC</string>
+    <string>About Extend2VNC</string>
    </property>
   </action>
   <action name="actionAbout_Qt">
