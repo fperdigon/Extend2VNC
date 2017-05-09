@@ -1,0 +1,8 @@
+gtf 1024 600 60
+xrandr --newmode "1024x600_60.00"  48.96  1024 1064 1168 1312  600 601 604 622  -HSync +Vsync
+xrandr --addmode VGA1 1024x600_60.00
+xrandr --output VGA1 --mode 1024x600_60.00 --left-of LVDS1
+x11vnc -clip 1024x600+0+0 -viewonly -forever
+xrandr --output VGA1 --off
+
+si por casualidad le diera un off a la pantalla activa usando kde, desde la consola entrar a ~/.kde/share/apps/kscreen y borrar todos los ficheros que estan dentro. en xfce buscar el fichero displays.xml con sudo find -type f -name "*displays*" y editarlo o borrarlo

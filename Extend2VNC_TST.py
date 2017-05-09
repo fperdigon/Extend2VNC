@@ -115,7 +115,8 @@ class utils:
         commandOut= commands.getstatusoutput(command)
         currentScreen  = commandOut[1].split(' connected')[0].split('\n')[-1]
 
-        virtualScreen = 'VIRTUAL1'
+        #virtualScreen = 'VIRTUAL1'
+        virtualScreen = 'VGA1'
 
         # gtf 1024 600 60
         command = 'gtf ' + resolution
@@ -147,7 +148,8 @@ class utils:
         import commands
 
         # xrandr --output VirtualScreen --off
-        command = 'xrandr --output VIRTUAL1 --off'
+        #command = 'xrandr --output VIRTUAL1 --off'
+        command = 'xrandr --output VGA1 --off'
         print(command)
         commands.getoutput(command)
 
