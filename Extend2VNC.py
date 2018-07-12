@@ -30,7 +30,7 @@ class EVUI(Extend2VNC_UI.Ui_MainWindow):
             self.start_pushButton.setText('Stop')
             resolutionList = ['640 480 60','800 480 60','1024 600 60','1024 768 60', '1366 768 60']
             i = self.resolution_comboBox.currentIndex()
-            if (i < 4):
+            if (i <= 4):
                 resolution = resolutionList[i]
             else:
                 if(self.customres_lineEdit.text() != ''):
@@ -38,7 +38,7 @@ class EVUI(Extend2VNC_UI.Ui_MainWindow):
                     resolution =  resolution.split('x')[0] + ' ' + resolution.split('x')[1] + ' 60'
                     print(resolution)
                 else:
-                    resolutionList[1]
+                    resolution = resolutionList[1]
 
             utils.generateVirtualScreen(resolution)
             self.popen = utils.vncStart(resolution)
@@ -169,13 +169,22 @@ class utils:
         import commands
 
         # Obtain courrent output screen
-        command = '/sbin/ifconfig'
+        # command = '/sbin/ifconfig'
+
+        # antiguo metodo
+        # command = '/sbin/ifconfig | grep inet | head -n 1'
+        
+        command = '/bin/ip addr | grep "inet " | head -n 1 | tail -n 1'
+       
         commandOut= commands.getstatusoutput(command)
-        print(commandOut)
-        nIP = commandOut[1].split('inet:')[1].split(' ')[0]
+        print(commandOut[1])
+        # nIP = commandOut[1].split('inet:')[1].split(' ')[0]
+        nIP = commandOut[1].strip().split(' ')[1].split('/')[0]
         if(nIP == '127.0.0.1'):
-            nIP = commandOut[1].split('inet:')[2].split(' ')[0]
-        print(nIP)
+            command = '/bin/ip addr | grep "inet " | head -n 2 | tail -n 1'
+            commandOut= commands.getstatusoutput(command)
+            nIP = commandOut[1].strip().split(' ')[1].split('/')[0]
+        print("ip: "+nIP)
         return nIP
 
 class MyMainWindow(QtGui.QMainWindow):
