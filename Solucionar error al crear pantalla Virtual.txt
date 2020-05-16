@@ -1,0 +1,14 @@
+Si al ejecutar el script da un error sobre que no encuentra o existe "VIRTUAL1", puede ser solucionado de la siguente forma:
+
+1. Ir a la ruta /usr/share/X11/xorg.conf.d/ y crear un archivo llamado "20-intel.conf".
+2. Abrir el archivo y agregar el siguente texto.
+
+Section "Device"
+    Identifier "intelgpu0"
+    Driver "intel"
+    Option "VirtualHeads" "1"
+EndSection
+
+3. Cerrar sesion y al logearse de nuevo todo tiene que funcionar.
+
+NOTA: Esta solucion solo fue probada en Debian 9.4 stretch, con una tarjeta grafica integrada Intel.
